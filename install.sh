@@ -23,6 +23,7 @@ mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
+mkdir -p $HOME/.config/fish
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 # Set fish as the default shell

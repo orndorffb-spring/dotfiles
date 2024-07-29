@@ -13,8 +13,7 @@ sudo $HOME/nvim.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/nvim
 sudo ln $HOME/nvim/usr/bin/nvim /usr/bin/nvim
 
-# Install starship
-curl -sS https://starship.rs/install.sh | sh
+
 
 # Symlink various dotfiles to home directory
 export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
@@ -27,6 +26,9 @@ mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 
 echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.zshrc
+
+# Install starship
+curl -sS https://starship.rs/install.sh | sh
 
 # Set zsh as the default shell
 sudo chsh "$(id -un)" --shell "/usr/bin/zsh"

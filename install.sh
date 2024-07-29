@@ -25,6 +25,8 @@ ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 
+ln -sf $DOTFILES/.starship.toml $HOME/.config/starship.toml
+
 echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.zshrc
 
 # Install starship

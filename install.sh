@@ -15,6 +15,7 @@ sudo ln $HOME/nvim/usr/bin/nvim /usr/bin/nvim
 
 # Symlink various dotfiles to home directory
 export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
+ln -sf $DOTFILES/.zshrc $HOME/.zshrc
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
 

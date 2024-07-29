@@ -16,4 +16,6 @@ alias dc='docker-compose'
 # Lists all ongoing sessions
 alias tl='tmux list-sessions'
 
+export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime
+
 starship init fish | source

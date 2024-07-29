@@ -25,15 +25,15 @@ ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 
-ln -sf $DOTFILES/.starship.toml $HOME/.config/starship.toml
-ln -sf $DOTFILES/.config.fish $HOME/.config/fish/config.fish
+ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
+ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.zshrc
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-# Set zsh as the default shell
+# Set fish as the default shell
 sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 
 echo "Done setting up Dotfiles!

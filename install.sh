@@ -28,7 +28,7 @@ ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.zshrc
 
 # Install starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # Set zsh as the default shell
 sudo chsh "$(id -un)" --shell "/usr/bin/zsh"

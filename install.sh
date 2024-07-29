@@ -25,9 +25,8 @@ ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
-echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.config/fish/config.fish
-
 # Set fish as the default shell
 sudo chsh "$(id -un)" --shell "/usr/bin/fish"
+ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 echo "Done setting up Dotfiles!"

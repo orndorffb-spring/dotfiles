@@ -3,7 +3,7 @@
 
 echo "Beginning setting up Dotfiles..."
 # Update package list and install zsh and neovim
-sudo apt update && sudo apt install -y zsh nodejs npm fzf tmux
+sudo apt update && sudo apt install -y zsh nodejs npm fzf tmux ripgrep
 
 # Install specific version of neovim
 # I'm using v0.9.5
@@ -24,5 +24,8 @@ mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 
 echo "export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime" >> ~/.zshrc
+
+# Set zsh as the default shell
+sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
 
 echo "Done setting up Dotfiles!

@@ -2,6 +2,7 @@
 
 
 echo "Beginning setting up Dotfiles..."
+sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update && sudo apt install -y fzf tmux ripgrep fish helix
 
 # Install specific version of neovim

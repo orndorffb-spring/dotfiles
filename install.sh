@@ -47,4 +47,8 @@ ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 # Copy tmuxifier layout
 cp $DOTFILES/work.session.sh $HOME/.tmuxifier/layouts/work.session.sh
 
+# Fish setup
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher install jorgebucaran/nvm.fish
+
 echo "Done setting up Dotfiles!"

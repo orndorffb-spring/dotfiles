@@ -21,7 +21,7 @@ export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 mkdir -p $HOME/.config/helix
-ln -sf $DOTFILES/healix.config.toml $HOME/.config/helix/config.toml
+ln -sf $DOTFILES/helix.config.toml $HOME/.config/helix/config.toml
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
 mkdir -p $HOME/.config/fish

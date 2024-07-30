@@ -17,7 +17,6 @@ chmod 755 $HOME/helix.appimage
 sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
 sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
-cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
@@ -26,10 +25,15 @@ export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
+
 mkdir -p $HOME/.config/helix
+cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime
 ln -sf $DOTFILES/helix.config.toml $HOME/.config/helix/config.toml
+
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
+
 ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
+
 mkdir -p $HOME/.config/fish
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 

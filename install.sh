@@ -44,4 +44,7 @@ ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
+# Copy tmuxifier layout
+cp $DOTFILES/work.session.sh $HOME/.tmuxifier/layouts/work.session.sh
+
 echo "Done setting up Dotfiles!"

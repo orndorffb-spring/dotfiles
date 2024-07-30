@@ -17,10 +17,10 @@ chmod 755 $HOME/helix.appimage
 sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
 sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
+cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
-
 # Symlink various dotfiles to home directory
 export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 

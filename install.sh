@@ -28,7 +28,7 @@ mkdir -p $HOME/.config/fish
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 # Set fish as the default shell
-sudo chsh "$(id -un)" --shell "/usr/bin/fish"
+#sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 echo "Done setting up Dotfiles!"

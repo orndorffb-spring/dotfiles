@@ -3,7 +3,7 @@
 
 echo "Beginning setting up Dotfiles..."
 # Update package list and install zsh and neovim
-sudo apt update && sudo apt install -y zsh nodejs npm fzf tmux ripgrep fish
+sudo apt update && sudo apt install -y zsh nodejs npm fzf tmux ripgrep fish helix
 
 # Install specific version of neovim
 # I'm using v0.9.5
@@ -21,6 +21,8 @@ export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
+mkdir -p $HOME/.config/helix
+ln -sf $DOTFILES/healix.config.toml $HOME/.config/helix/config.toml
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/starship.toml $HOME/.config/starship.toml
 mkdir -p $HOME/.config/fish

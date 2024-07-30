@@ -1,3 +1,6 @@
+set -Ux TERM xterm-256color
+set -Ux COLORTERM truecolor
+
 alias nv="nvim"
 
 # Some tmux-related shell aliases

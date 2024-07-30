@@ -1,6 +1,6 @@
 set -Ux TERM xterm-256color
 set -Ux COLORTERM truecolor
-set -gx PATH "~/.tmuxifier/bin" $PATH
+fish_add_path "$HOME/.tmuxifier/bin"
 
 alias nv="nvim"
 

@@ -16,7 +16,7 @@ wget -O $HOME/helix.appimage https://github.com/helix-editor/helix/releases/down
 chmod 755 $HOME/helix.appimage
 sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
-sudo ln $HOME/hx/usr/bin/hx /usr/bin/hx
+sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
@@ -34,7 +34,7 @@ mkdir -p $HOME/.config/fish
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 # Set fish as the default shell
-#sudo chsh "$(id -un)" --shell "/usr/bin/fish"
+sudo chsh "$(id -un)" --shell "/usr/bin/fish"
 ln -sf $DOTFILES/config.fish $HOME/.config/fish/config.fish
 
 echo "Done setting up Dotfiles!"

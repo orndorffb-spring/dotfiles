@@ -23,6 +23,9 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 # Symlink various dotfiles to home directory
 export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
+# Tmuxifier
+git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+
 mkdir -p $HOME/.config/nvim
 ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 

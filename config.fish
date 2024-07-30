@@ -15,9 +15,10 @@ alias tl='tmux list-sessions'
 
 export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime
 
-function setup_fisher_and_nvm
+function setup_fish_stuff
   curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher  
   fisher install jorgebucaran/nvm.fish
+  curl -L --create-dirs -o ~/.config/fish/functions/rvm.fish https://raw.github.com/lunks/fish-nuggets/master/functions/rvm.fish
 end
 
 starship init fish | source

@@ -2,18 +2,28 @@ session_root "/workspaces/development-space"
 if initialize_session "work"; then
 
   new_window "rotom"
-  run_cmd "cd rotom && clear"
-  split_v 50
-  run_cmd "cd rotom && clear"
+  run_cmd "cd rotom && rvm use && clear"
+  split_v 70
+  run_cmd "cd rotom && rvm use && clear"
+  split_h 50 
+  run_cmd  "cd rotom && rvm use && bin/rails c"  
   select_pane 0
   run_cmd "hx ."
 
   new_window "ehr-api"
-  run_cmd "cd ehr-api && clear"
-  split_v 50
-  run_cmd "cd ehr-api && clear"
+  run_cmd "cd ehr-api && rvm use && clear"
+  split_v 70
+  run_cmd "cd ehr-api && rvm use && clear"
+  split_h 50 
+  run_cmd  "cd ehr-api && rvm use && bin/rails c"  
   select_pane 0
   run_cmd "hx ."
+
+  new_window "fe"
+  run_cmd ". .devcontainer/fix_failed_prebuild_permission_prob.sh"
+
+  new_window "ports"
+  run_cmd "bash -c '.devcontainer/publish-ports.sh'"
 
   select_window 1
 

@@ -3,14 +3,14 @@ if initialize_session "work"; then
 
   new_window "rotom"
   run_cmd "cd rotom && rvm use && clear"
-  split_v 70
+  split_v 10
   run_cmd "cd rotom && rvm use && clear"
   select_pane 0
   run_cmd "hx ."
 
   new_window "ehr-api"
   run_cmd "cd ehr-api && rvm use && clear"
-  split_v 70
+  split_v 10
   run_cmd "cd ehr-api && rvm use && clear"
   select_pane 0
   run_cmd "hx ."

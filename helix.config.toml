@@ -2,7 +2,11 @@ theme = "ayu_mirage"
 
 [editor]
 line-number = "relative"
-mouse = false
+rulers = [120]
+
+[editor.indent-guides]
+render = true
+character = "| "
 
 [editor.cursor-shape]
 insert = "bar"
@@ -13,4 +17,4 @@ select = "underline"
 hidden = false
 
 [keys.insert]
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+j = { k = "normal_mode" }

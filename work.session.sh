@@ -5,8 +5,6 @@ if initialize_session "work"; then
   run_cmd "cd rotom && rvm use && clear"
   split_v 70
   run_cmd "cd rotom && rvm use && clear"
-  split_h 50 
-  run_cmd  "cd rotom && rvm use && bin/rails c"  
   select_pane 0
   run_cmd "hx ."
 
@@ -14,8 +12,6 @@ if initialize_session "work"; then
   run_cmd "cd ehr-api && rvm use && clear"
   split_v 70
   run_cmd "cd ehr-api && rvm use && clear"
-  split_h 50 
-  run_cmd  "cd ehr-api && rvm use && bin/rails c"  
   select_pane 0
   run_cmd "hx ."
 

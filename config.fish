@@ -13,7 +13,6 @@ alias dc='docker-compose'
 
 alias tl='tmux list-sessions'
 
-alias lint-rb='git diff --name-only master | grep '\.rb$' | xargs bin/standardrb'
 
 export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime
 

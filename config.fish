@@ -17,6 +17,10 @@ alias lint-rb='git diff --name-only master | grep '\.rb$' | xargs bin/standardrb
 
 export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime
 
+function lint-rb
+    git diff --name-only master | grep '\.rb$' | xargs bin/standardrb
+end
+
 function setup_fish_stuff
   curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher  
   fisher install jorgebucaran/nvm.fish

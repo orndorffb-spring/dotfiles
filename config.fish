@@ -52,4 +52,8 @@ function rotom_get
         --header 'Authorization: Bearer '$access_token'' | jq .
 end
 
+function clean_trace
+    cat | jq 'del(.traces."Framework Trace", .traces."Full Trace")'
+end
+
 starship init fish | source

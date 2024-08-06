@@ -18,6 +18,11 @@ sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
 sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
 
+# Install zellij
+wget -O $HOME/zellij.tar.gz https://github.com/zellij-org/zellij/releases/download/v0.40.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar -xvf zellij*.tar.gz
+sudo ln $HOME/zellij /usr/bin/zellij
+
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 # Symlink various dotfiles to home directory

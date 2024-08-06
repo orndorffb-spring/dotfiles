@@ -1,5 +1,6 @@
 set -Ux TERM xterm-256color
 set -Ux COLORTERM truecolor
+set -gx EDITOR hx
 fish_add_path "$HOME/.tmuxifier/bin"
 
 alias nv="nvim"

@@ -18,7 +18,7 @@ alias tl='tmux list-sessions'
 export VIMRUNTIME=$HOME/nvim/usr/share/nvim/runtime
 
 function lint-rb
-    git diff --name-only master | grep '\.rb$' | xargs bin/standardrb --fix
+    git diff --name-only master | grep '\.rb$' | xargs bin/standardrb --fix-unsafely
 end
 
 function setup_fish_stuff

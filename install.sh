@@ -2,14 +2,7 @@
 
 
 echo "Beginning setting up Dotfiles..."
-sudo apt update && sudo apt install -y tmux ripgrep fish
-
-# Install nivm
-wget -O $HOME/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage
-chmod 755 $HOME/nvim.appimage
-sudo $HOME/nvim.appimage --appimage-extract
-sudo mv ./squashfs-root $HOME/nvim
-sudo ln $HOME/nvim/usr/bin/nvim /usr/bin/nvim
+sudo apt update && sudo apt install -y tmux ripgrep fish emacs
 
 # Install hx
 wget -O $HOME/helix.appimage https://github.com/helix-editor/helix/releases/download/24.07/helix-24.07-x86_64.AppImage
@@ -17,11 +10,6 @@ chmod 755 $HOME/helix.appimage
 sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
 sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
-
-# Install zellij
-wget -O $HOME/zellij.tar.gz https://github.com/zellij-org/zellij/releases/download/v0.40.1/zellij-x86_64-unknown-linux-musl.tar.gz
-tar -xvf zellij*.tar.gz
-sudo ln $HOME/zellij /usr/bin/zellij
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y
@@ -31,8 +19,9 @@ export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 # Tmuxifier
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
 
-mkdir -p $HOME/.config/nvim
-ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
+
+mkdir -p $HOME/.emacs.d
+ln -sf $DOTFILES/init.el $HOME/.emacs.d/init.el
 
 mkdir -p $HOME/.config/helix
 cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime

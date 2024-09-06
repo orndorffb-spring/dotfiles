@@ -2,7 +2,7 @@
 
 
 echo "Beginning setting up Dotfiles..."
-sudo apt update && sudo apt install -y tmux ripgrep fish emacs
+sudo apt update && sudo apt install -y tmux ripgrep fish
 
 # Install hx
 wget -O $HOME/helix.appimage https://github.com/helix-editor/helix/releases/download/24.07/helix-24.07-x86_64.AppImage
@@ -18,10 +18,6 @@ export DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 
 # Tmuxifier
 git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
-
-
-mkdir -p $HOME/.emacs.d
-ln -sf $DOTFILES/init.el $HOME/.emacs.d/init.el
 
 mkdir -p $HOME/.config/helix
 cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime

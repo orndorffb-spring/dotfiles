@@ -6,6 +6,7 @@ fish_add_path "$HOME/.tmuxifier/bin"
 alias nv="nvim"
 
 alias t='tmux attach || tmux new-session'
+alias lg='lazygit'
 alias tw='tmuxifier s work'
 alias ta='tmux attach -t'
 alias tn='tmux new-session'

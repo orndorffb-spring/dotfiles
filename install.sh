@@ -18,10 +18,11 @@ sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix
 sudo ln $HOME/helix/usr/bin/hx /usr/bin/hx
 
-# Install zellij
-wget -O $HOME/zellij.tar.gz https://github.com/zellij-org/zellij/releases/download/v0.40.1/zellij-x86_64-unknown-linux-musl.tar.gz
-tar -xvf zellij*.tar.gz
-sudo ln $HOME/zellij /usr/bin/zellij
+# Install Lazygit
+wget -O $HOME/lazygit.tar.gz https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Linux_x86_64.tar.gz
+tar -xvf lazygit*.tar.gz
+sudo ln $HOME/lazygit /usr/bin/lazygit
+
 
 # Install starship
 curl -sS https://starship.rs/install.sh | sh -s -- -y

@@ -10,6 +10,7 @@ alias lg='lazygit'
 alias tw='tmuxifier s work'
 alias ta='tmux attach -t'
 alias tn='tmux new-session'
+alias bat='batcat'
 
 alias dc='docker-compose'
 

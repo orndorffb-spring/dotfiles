@@ -2,7 +2,7 @@
 
 
 echo "Beginning setting up Dotfiles..."
-sudo apt update && sudo apt install -y fzf ripgrep fish
+sudo apt update && sudo apt install -y fzf ripgrep fish bat
 
 # Install nivm
 wget -O $HOME/nvim.appimage https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage

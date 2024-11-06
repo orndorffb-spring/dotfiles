@@ -6,14 +6,14 @@ if initialize_session "work"; then
   split_h 50
   run_cmd "cd rotom && rvm use && clear"
   select_pane 0
-  run_cmd "nv ."
+  run_cmd "hx ."
 
   new_window "ehr-api"
   run_cmd "cd ehr-api && rvm use && clear"
   split_h 50
   run_cmd "cd ehr-api && rvm use && clear"
   select_pane 0
-  run_cmd "nv ."
+  run_cmd "hx ."
 
   new_window "fe"
   run_cmd ". .devcontainer/fix_failed_prebuild_permission_prob.sh"

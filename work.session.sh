@@ -16,7 +16,6 @@ if initialize_session "work"; then
   run_cmd "hx ."
 
   new_window "diglet"
-  run_cmd "cd diglet"
   run_cmd "cd diglet && php artisan serve --port=8081"
   run_cmd "hx ."
 

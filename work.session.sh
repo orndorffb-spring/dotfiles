@@ -15,8 +15,12 @@ if initialize_session "work"; then
   select_pane 0
   run_cmd "hx ."
 
+  new_window "diglet"
+  run_cmd "cd diglet"
+  run_cmd "cd diglet && php artisan serve --port=8081"
+  run_cmd "hx ."
+
   new_window "fe"
-  run_cmd ". .devcontainer/fix_failed_prebuild_permission_prob.sh"
 
   new_window "ports"
   run_cmd "bash -c '.devcontainer/publish-ports.sh'"

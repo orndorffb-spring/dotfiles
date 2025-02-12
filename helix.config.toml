@@ -1,4 +1,4 @@
-theme = "kanagawa-dragon"
+theme = "modus_operandi"
 
 [editor]
 line-number = "relative"
@@ -18,3 +18,6 @@ hidden = false
 
 [keys.insert]
 j = { k = "normal_mode" }
+
+[editor.lsp]
+auto-signature-help = false

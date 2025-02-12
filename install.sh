@@ -12,7 +12,7 @@ sudo mv ./squashfs-root $HOME/nvim
 sudo ln $HOME/nvim/usr/bin/nvim /usr/bin/nvim
 
 # Install hx
-wget -O $HOME/helix.appimage https://github.com/helix-editor/helix/releases/download/24.07/helix-24.07-x86_64.AppImage
+wget -O $HOME/helix.appimage https://github.com/helix-editor/helix/releases/download/25.01.1/helix-25.01.1-x86_64.AppImage
 chmod 755 $HOME/helix.appimage
 sudo $HOME/helix.appimage --appimage-extract
 sudo mv ./squashfs-root $HOME/helix

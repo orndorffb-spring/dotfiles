@@ -35,6 +35,7 @@ ln -sf $DOTFILES/init.lua $HOME/.config/nvim/init.lua
 mkdir -p $HOME/.config/helix
 cp -r $HOME/helix/usr/lib/helix/runtime/ $HOME/.config/helix/runtime
 ln -sf $DOTFILES/helix.config.toml $HOME/.config/helix/config.toml
+ln -sf $DOTFILES/helix.languages.toml $HOME/.config/helix/languages.toml
 
 ln -sf $DOTFILES/.tmux.conf $HOME/.tmux.conf
 
